@@ -21,10 +21,10 @@ public class MemberService {
     * 회원가입
     * */
     public Long join(Member member) {
-        validateDuplicateMember(member); // 중복회원 검증
-        memberRepository.save(member);
+            validateDuplicateMember(member); // 중복회원 검증
+            memberRepository.save(member);
 
-        return member.getId();
+            return member.getId();
     } // join()-end
 
     private void validateDuplicateMember(Member member){
@@ -37,7 +37,7 @@ public class MemberService {
     /*
     * 전체 회원 조회
     * */
-    public List<Member> findMembers(){
+    public List<Member> findMembers() {
         return memberRepository.findAll();
     } // findMembers()-end
 
